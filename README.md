@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -64,3 +65,10 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+=======
+# API-laravel
+Uma api que gera um token de autenticação para o usuario que for se registrar.
+
+Caso for realizar os testes lembre-se de renomear o arquivo .env para o seu cenário de banco de dados.
+
+>>>>>>> 646e766afca81abd78537e27fbb9ae1f204386a1
