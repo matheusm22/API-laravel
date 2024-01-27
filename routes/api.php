@@ -2,18 +2,15 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PessoaController;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "api" middleware group. Make something great!
-|
-*/
+Route::get('/ativar-token', [AuthController::class, 'ativarToken']);
+Route::get('/desativar-token', [AuthController::class, 'desativarToken']);
+Route::get('/login', [AuthController::class, 'login']);
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+
+// Rotas protegidas por autenticação JWT e validação de token
+Route::middleware(['CheckApiToken'])->group (function () {
+    Route::get('/pessoas', [PessoaController::class, 'index']);
 });
